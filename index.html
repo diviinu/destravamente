@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Desbloquea tu Mente - Audios Guiados</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #fefcea, #f1da36);
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem;
+      background-color: white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      margin-top: 40px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #b38f00;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      color: #555;
+    }
+
+    ul {
+      margin: 1rem 0;
+      padding-left: 1.2rem;
+    }
+
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    .cta {
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    .cta button {
+      background: #ffcc00;
+      color: #000;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .cta button:hover {
+      background: #e6b800;
+    }
+
+    .bonus {
+      background-color: #fef3c7;
+      padding: 1rem;
+      border-left: 5px solid #f59e0b;
+      margin-top: 1.5rem;
+      border-radius: 8px;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: 2rem;
+      color: #777;
+    }
+
+    /* Estilos do popup */
+    #popup {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.6);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    #popup-content {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      max-width: 400px;
+      text-align: center;
+    }
+
+    #popup-content h2 {
+      margin-bottom: 1rem;
+      color: #b38f00;
+    }
+
+    #popup-content p {
+      margin-bottom: 1rem;
+      color: #555;
+    }
+
+    #formulario input {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    #formulario button {
+      background-color: #f1da36;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🔓 Desbloquea Tu Mente Ahora</h1>
+    <h2>Audios poderosos para liberar tu mente y atraer energías positivas</h2>
+
+    <p>¿Sientes que tu mente está sobrecargada, llena de pensamientos repetitivos que te impiden avanzar?</p>
+    <p>No estás solo. La mayoría de las personas vive en piloto automático, atrapada en ciclos de ansiedad, procrastinación y agotamiento mental.</p>
+    <p>Pero hay una forma simple y poderosa de romper este patrón.</p>
+
+    <h2>✨ Con el <strong>Kit Desbloquea Tu Mente</strong> lograrás:</h2>
+    <ul>
+      <li>✅ Silenciar el ruido mental y activar tu paz interior</li>
+      <li>✅ Reprogramar tu mente con afirmaciones y visualizaciones</li>
+      <li>✅ Atraer energía positiva y claridad emocional</li>
+      <li>✅ Sentir más ligereza, enfoque y propósito en tu día a día</li>
+    </ul>
+
+    <div class="bonus">
+      <h3>🎁 Bonos Exclusivos:</h3>
+      <ul>
+        <li>+ Planner Digital de Autoconocimiento (PDF)</li>
+        <li>+ Grupo VIP en Telegram para apoyo y energía colectiva</li>
+        <li>+ Meditación de Prosperidad para escuchar durante 21 días</li>
+      </ul>
+    </div>
+
+    <div class="cta">
+      <p><strong>Oferta Especial:</strong> Solo por $41.333 – acceso de por vida</p>
+      <button onclick="comprarAhora()">💫 Quiero Desbloquear Mi Mente</button>
+    </div>
+
+    <div class="footer">
+      <p>Garantía incondicional de 7 días | Acceso inmediato tras el pago</p>
+    </div>
+  </div>
+
+  <!-- POPUP DE ISCA DIGITAL -->
+  <div id="popup">
+    <div id="popup-content">
+      <h2>📘 ¡Descarga tu eBook Gratis!</h2>
+      <p>Haz clic abajo para desbloquear tu mente con 7 rituales poderosos.</p>
+      <form id="formulario" onsubmit="enviarFormulario(event)">
+        <input type="text" name="nombre" placeholder="Tu nombre" required />
+        <input type="email" name="email" placeholder="Tu correo electrónico" required />
+        <input type="tel" name="telefono" placeholder="Tu número de teléfono" required />
+        <button type="submit">📥 Descargar eBook Gratis</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function comprarAhora() {
+      window.location.href = "https://pay.kiwify.com/Og22sHd";
+    }
+
+    setTimeout(() => {
+      document.getElementById('popup').style.display = 'flex';
+    }, 2000);
+
+    function enviarFormulario(event) {
+      event.preventDefault();
+      const datos = {
+        nombre: event.target.nombre.value,
+        email: event.target.email.value,
+        telefono: event.target.telefono.value
+      };
+
+      fetch('/guardar', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(datos)
+      })
+      .then(res => {
+        if (res.ok) {
+          alert('¡Gracias! Tu eBook será enviado pronto.');
+          document.getElementById('popup').style.display = 'none';
+        } else {
+          alert('Error al enviar los datos. Intenta nuevamente.');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
